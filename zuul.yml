@@ -1,0 +1,14 @@
+server:
+  port: 9999
+
+zuul:
+  routes:
+    movies:
+     #url: http://localhost:8080
+     path: /movies
+     #if no discovery, we have to know where apps are running
+     #url: http://localhost:8080/
+     #if you have discovery, zuul ask ureka for url
+     service-id: movies # lines up with spring.application name
+     #remove whatever zuul.routes.movies.path says from url
+     strip-prefix: true # true by default

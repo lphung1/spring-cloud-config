@@ -1,0 +1,7 @@
+#in prod, you will have at least 2 eureka instances, by default eureka tries to register with eureka instance
+eureka:
+  client:
+    register-with-eureka: false
+    
+server:
+  port: 8761
